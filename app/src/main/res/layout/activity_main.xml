@@ -1,0 +1,165 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity">
+
+    <LinearLayout
+        android:id="@+id/header"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:background="@color/colorAccent"
+        android:orientation="horizontal"
+        android:onClick="showCard"
+        >
+
+    </LinearLayout>
+
+    <com.amar.library.ui.StickyScrollView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/header"
+        app:stickyHeader="@id/stickyHeader">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:padding="5dp">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="5dp"
+                android:padding="10dp"
+                android:weightSum="2">
+
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="left"
+                    android:layout_weight="1"
+                    android:text="Andi Maelstorm" />
+
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:gravity="right"
+                    android:text="Supir : B 1234 TOP" />
+            </LinearLayout>
+            <!-- daily -->
+
+            <TextView
+                android:id="@+id/stickyHeader"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="5dp"
+                android:background="@color/colorPrimaryDark"
+                android:gravity="center"
+                android:padding="5dp"
+                android:text="Performa Harian"
+                android:textColor="@color/colorWhite"
+                android:textSize="19sp" />
+
+            <android.support.v7.widget.RecyclerView
+                android:id="@+id/rvDates"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_horizontal"
+                android:layout_marginBottom="5dp"
+                android:gravity="center_horizontal">
+
+            </android.support.v7.widget.RecyclerView>
+
+            <include layout="@layout/template_header_kriteria" />
+
+            <android.support.v7.widget.RecyclerView
+                android:id="@+id/rvKriteriaDates"
+                android:layout_width="match_parent"
+                android:layout_height="100dp"
+                android:layout_gravity="center_horizontal"
+                android:layout_marginBottom="5dp"
+                android:gravity="center_horizontal"></android.support.v7.widget.RecyclerView>
+
+            <include
+                android:id="@+id/kriteria_daily"
+                layout="@layout/template_footer_kriteria" />
+
+            <!-- weekly -->
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="5dp"
+                android:background="@color/colorPrimaryDark"
+                android:gravity="center"
+                android:padding="5dp"
+                android:text="Performa Mingguan"
+                android:textColor="@color/colorWhite"
+                android:textSize="19sp" />
+
+            <android.support.v7.widget.RecyclerView
+                android:id="@+id/rvWeeks"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_horizontal"
+                android:layout_marginBottom="5dp"
+                android:gravity="center_horizontal">
+
+            </android.support.v7.widget.RecyclerView>
+
+            <include layout="@layout/template_header_kriteria" />
+
+            <android.support.v7.widget.RecyclerView
+                android:id="@+id/rvKriteriaWeeks"
+                android:layout_width="match_parent"
+                android:layout_height="100dp"
+                android:layout_gravity="center_horizontal"
+                android:layout_marginBottom="5dp"
+                android:gravity="center_horizontal"></android.support.v7.widget.RecyclerView>
+
+            <include layout="@layout/template_footer_kriteria" />
+
+            <!-- yearly -->
+
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="5dp"
+                android:background="@color/colorPrimaryDark"
+                android:gravity="center"
+                android:padding="5dp"
+                android:text="Performa Bulanan"
+                android:textColor="@color/colorWhite"
+                android:textSize="19sp" />
+
+            <android.support.v7.widget.RecyclerView
+                android:id="@+id/rvYears"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_horizontal"
+                android:layout_marginBottom="5dp"
+                android:gravity="center_horizontal">
+
+            </android.support.v7.widget.RecyclerView>
+
+            <include layout="@layout/template_header_kriteria" />
+
+            <android.support.v7.widget.RecyclerView
+                android:id="@+id/rvKriteriaYear"
+                android:layout_width="match_parent"
+                android:layout_height="100dp"
+                android:layout_gravity="center_horizontal"
+                android:layout_marginBottom="5dp"
+                android:gravity="center_horizontal"></android.support.v7.widget.RecyclerView>
+
+
+            <include
+                android:id="@+id/stickyFooter"
+                layout="@layout/template_footer_kriteria" />
+        </LinearLayout>
+    </com.amar.library.ui.StickyScrollView>
+</RelativeLayout>

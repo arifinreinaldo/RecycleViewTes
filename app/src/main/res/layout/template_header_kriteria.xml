@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:weightSum="5"
+    xmlns:android="http://schemas.android.com/apk/res/android">
+    <TextView
+        android:id="@+id/rvCritKriteria"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:text="Kriteria"
+        android:gravity="left"
+        android:textStyle="bold"
+        android:layout_weight="2"/>
+    <TextView
+        android:id="@+id/rvCritHasil"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:text="Hasil"
+        android:textStyle="bold"
+        android:gravity="left"
+        android:layout_weight="1"/>
+    <TextView
+        android:id="@+id/rvCritPoin"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:text="Poin"
+        android:gravity="right"
+        android:textStyle="bold"
+        android:layout_weight="1"/>
+    <TextView
+        android:id="@+id/rvCritInsentif"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:text="Insentif"
+        android:textStyle="bold"
+        android:gravity="right"
+        android:layout_weight="1"/>
+</LinearLayout>

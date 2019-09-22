@@ -1,0 +1,174 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical"
+    tools:context=".MainActivity">
+
+    <include layout="@layout/template_header" />
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <include layout="@layout/template_info_user" />
+
+            <!-- daily -->
+            <android.support.v7.widget.CardView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="3dp"
+                android:layout_marginTop="5dp">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical">
+
+                    <TextView
+                        android:id="@+id/stickyHeader"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginBottom="5dp"
+                        android:background="@color/colorPrimaryDark"
+                        android:gravity="center"
+                        android:padding="5dp"
+                        android:text="Performa Harian"
+                        android:textColor="@color/colorWhite"
+                        android:textSize="19sp" />
+
+                    <android.support.v7.widget.RecyclerView
+                        android:id="@+id/rvDates"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center_horizontal"
+                        android:layout_marginBottom="5dp"
+                        android:gravity="center_horizontal">
+
+                    </android.support.v7.widget.RecyclerView>
+
+                    <include layout="@layout/template_header_kriteria" />
+
+                    <android.support.v7.widget.RecyclerView
+                        android:id="@+id/rvKriteriaDates"
+                        android:layout_width="match_parent"
+                        android:layout_height="100dp"
+                        android:layout_gravity="center_horizontal"
+                        android:layout_marginBottom="5dp"
+                        android:gravity="center_horizontal"></android.support.v7.widget.RecyclerView>
+
+                    <include
+                        android:id="@+id/kriteria_daily"
+                        layout="@layout/template_footer_kriteria" />
+                </LinearLayout>
+            </android.support.v7.widget.CardView>
+            <!-- weekly -->
+            <android.support.v7.widget.CardView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="3dp"
+                android:layout_marginTop="5dp">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical">
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginBottom="5dp"
+                        android:background="@color/colorPrimaryDark"
+                        android:gravity="center"
+                        android:padding="5dp"
+                        android:text="Performa Mingguan"
+                        android:textColor="@color/colorWhite"
+                        android:textSize="19sp" />
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:gravity="center">
+
+                        <android.support.v7.widget.RecyclerView
+                            android:id="@+id/rvWeeks"
+                            android:layout_width="wrap_content "
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center_horizontal"
+                            android:layout_marginBottom="5dp"
+                            android:gravity="center_horizontal">
+
+                        </android.support.v7.widget.RecyclerView>
+                    </LinearLayout>
+                    <include layout="@layout/template_header_kriteria" />
+
+                    <android.support.v7.widget.RecyclerView
+                        android:id="@+id/rvKriteriaWeeks"
+                        android:layout_width="match_parent"
+                        android:layout_height="100dp"
+                        android:layout_gravity="center_horizontal"
+                        android:layout_marginBottom="5dp"
+                        android:gravity="center_horizontal"></android.support.v7.widget.RecyclerView>
+
+                    <include layout="@layout/template_footer_kriteria" />
+                </LinearLayout>
+            </android.support.v7.widget.CardView>
+            <!-- yearly -->
+
+
+            <android.support.v7.widget.CardView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="3dp"
+                android:layout_marginTop="5dp">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical">
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginBottom="5dp"
+                        android:background="@color/colorPrimaryDark"
+                        android:gravity="center"
+                        android:padding="5dp"
+                        android:text="Performa Bulanan"
+                        android:textColor="@color/colorWhite"
+                        android:textSize="19sp" />
+
+                    <android.support.v7.widget.RecyclerView
+                        android:id="@+id/rvYears"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center_horizontal"
+                        android:layout_marginBottom="5dp"
+                        android:gravity="center_horizontal">
+
+                    </android.support.v7.widget.RecyclerView>
+
+                    <include layout="@layout/template_header_kriteria" />
+
+                    <android.support.v7.widget.RecyclerView
+                        android:id="@+id/rvKriteriaYear"
+                        android:layout_width="match_parent"
+                        android:layout_height="100dp"
+                        android:layout_gravity="center_horizontal"
+                        android:layout_marginBottom="5dp"
+                        android:gravity="center_horizontal"></android.support.v7.widget.RecyclerView>
+
+
+                    <include
+                        android:id="@+id/stickyFooter"
+                        layout="@layout/template_footer_kriteria" />
+                </LinearLayout>
+            </android.support.v7.widget.CardView>
+        </LinearLayout>
+    </ScrollView>
+</LinearLayout>

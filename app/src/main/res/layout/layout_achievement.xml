@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android" android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="horizontal"
+    android:weightSum="10">
+    <RelativeLayout
+        android:id="@+id/AchievementLLColor"
+        android:layout_weight="0.5"
+        android:layout_width="0dp"
+        android:layout_height="match_parent"
+        android:orientation="horizontal">
+        <LinearLayout
+            android:layout_width="10dp"
+            android:layout_height="match_parent"></LinearLayout>
+    </RelativeLayout>
+    <LinearLayout
+        android:layout_weight="2"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:gravity="center">
+        <ImageView
+            android:id="@+id/AchievementImgSrc"
+            android:layout_width="50dp"
+            android:layout_height="50dp"
+            android:src="@drawable/ic_truck_3"/>
+    </LinearLayout>
+    <RelativeLayout
+        android:layout_weight="4.5"
+        android:layout_width="0dp"
+        android:layout_height="match_parent">
+        <TextView
+            android:layout_centerVertical="true"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Scan Out Kantor 8.30"
+            android:textSize="16sp"/>
+    </RelativeLayout>
+    <RelativeLayout
+        android:layout_weight="3"
+        android:layout_width="0dp"
+        android:layout_height="match_parent"
+        android:padding="5dp">
+        <ProgressBar
+            android:id="@+id/progress_bar"
+            android:layout_centerVertical="true"
+            style="@style/MyProgressBar"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:max="10"
+            android:indeterminate="false"
+            android:secondaryProgress="3"/>
+        <TextView
+            android:id="@+id/progress_text"
+            android:layout_centerHorizontal="true"
+            android:layout_centerVertical="true"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="6/9"/>
+    </RelativeLayout>
+</LinearLayout>
